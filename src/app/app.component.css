@@ -1,0 +1,46 @@
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.footer-distributed .footer-center i{
+  margin-left: 0;
+}
+.left{ margin-left:5%; float: left; width: 28%;height: 150%; }
+.right{  margin-right: 5%; float: right; width: 28%; height: 150%;}
+.center{ display: inline-block;margin-left:2.5% ; width: 28%;height: 150%; }
+
+.color-txt{
+  color: whitesmoke;
+  height: 300px;
+}
+.centert {
+  display: block;
+margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.vertical{ 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.horizontal{ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-self: center;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+}
+      

@@ -1,0 +1,71 @@
+<mat-toolbar color="primary">
+      <span>
+          <a target="_self" rel="noopener" href="/">
+          <img
+          width="40"
+          alt="Forte Hack Logo"
+          src="assets/img/logo.jpg"/>
+          </a>
+      </span>
+    
+      <!-- This fills the remaining space of the current row -->
+      <span class="example-fill-remaining-space"></span>
+    
+      <span>
+          <button mat-button [matMenuTriggerFor]="menu"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></button>
+          <mat-menu #menu="matMenu">
+          <button mat-menu-item>Sign Out</button>
+          <button mat-menu-item>Profile</button>
+          </mat-menu>
+      </span>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+<footer class="footer-distributed vertical " style="background-color: blanchedalmond;">
+ 
+      <div class="footer-left ">
+    <img src="../assets/pp.jpg" width="30px" height="30px">
+          <h3>About<span> The Forte Hack</span></h3>
+  
+          <p class="horizontal" >
+              <a href="#" >Home</a>
+              |
+              <a href="#">Blog</a>
+              |
+              <a href="#">About</a>
+              |
+              <a href="#">Contact</a>
+          </p>
+  
+          <p class="footer-company-name">© 2020 The Forte Hack</p>
+      </div>
+  
+      <div class="footer-center" >
+          <div>
+              <i class="fa fa-map-marker"></i>
+                <p><span>Cummins College of Engineering for women, Pune.(Address part)</span>
+                  Karve Nagar, Pune - 52</p>
+          </div>
+  
+          <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 8888151827</p>
+          </div>
+          <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="thefortehack.com">thefortehack.com</a></p>
+          </div>
+      </div>
+      <div class="footer-right">
+          <p class="footer-company-about">
+              <span>About the company</span>
+              We provide platform for non-technical people. So that they can show their talent.</p>
+          <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+      </div>
+  </footer>
