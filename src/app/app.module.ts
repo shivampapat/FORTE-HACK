@@ -29,8 +29,8 @@ import { HomeComponent } from './home/home.component';
 import { TemplateCategoryComponent } from './template-category/template-category.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { AboutComponent } from './../../../website/src/app/about/about.component';
-import { DanceComponent } from './../../../website/src/app/dance/dance.component';
+import { AboutComponent } from './about/about.component';
+import { DanceComponent } from './dance/dance.component';
 
 
 //
