@@ -1,0 +1,25 @@
+  <mat-toolbar color="primary">
+    <span>
+        <a target="_self" rel="noopener" href="/">
+        <img
+        width="40"
+        alt="Forte Hack Logo"
+        src="assets/img/logo.jpg"/>
+        </a>
+    </span>
+  
+    <span class="example-fill-remaining-space"></span>
+    <span style="padding-right: 30px;">
+      <button mat-raised-button><a routerLink="about">About Us</a></button>
+    </span>
+    <span>
+      
+    </span>
+    <span>
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item>Sign Out</button>
+        <button mat-menu-item>Profile</button>
+        </mat-menu>
+    </span>
+  </mat-toolbar>

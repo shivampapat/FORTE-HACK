@@ -10,12 +10,12 @@ import{CompetitionPageComponent} from './competition-page/competition-page.compo
 
 
 const routes: Routes = [
+  {path:'', component:HomeComponent},  
   {path:'SignIn', component: SignInComponent},
   {path:'LogIn', component: LogInComponent},
   {path:'Profile', component: ProfileComponent},
   {path:'Webinar', component: WebinarFrontComponent},
   {path:'WebinarVideo', component: WebinarVideosComponent},
-  {path:'', component:HomeComponent},  
   {path:'Competitions', component: CompetitionPageComponent}
 ];
 

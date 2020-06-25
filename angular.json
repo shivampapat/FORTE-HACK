@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "Forte-Hack-Frontend"
+  "defaultProject": "Forte-Hack-Frontend",
+  "cli": {
+    "analytics": "22c04d6e-c133-4e83-9f06-3288ab24e2ba"
+  }
 }

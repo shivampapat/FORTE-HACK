@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -12,6 +13,8 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatIconModule } from '@angular/material/icon'
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card'
+import { MatButtonModule } from '@angular/material/button'
 
 //Components
 import { AppRoutingModule, routedclass } from './app-routing.module';
@@ -25,6 +28,11 @@ import { CompetitionPageComponent } from './competition-page/competition-page.co
 import { CompetitionPageHostComponent } from './competition-page-host/competition-page-host.component';
 import { HomeComponent } from './home/home.component';
 import { TemplateCategoryComponent } from './template-category/template-category.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+
+//
+//import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -37,8 +45,10 @@ import { TemplateCategoryComponent } from './template-category/template-category
     CompetitionPageComponent,
     CompetitionPageHostComponent,
     HomeComponent,
+    HeaderComponent,
     TemplateCategoryComponent,
-    routedclass
+    routedclass,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +58,12 @@ import { TemplateCategoryComponent } from './template-category/template-category
     MatMenuModule,
     MatIconModule,
     MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig,'ForteHackTest'),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    //AngularFontAwesomeModule
 
   ],
   providers: [],
