@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -30,6 +29,9 @@ import { HomeComponent } from './home/home.component';
 import { TemplateCategoryComponent } from './template-category/template-category.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './../../../website/src/app/about/about.component';
+import { DanceComponent } from './../../../website/src/app/dance/dance.component';
+
 
 //
 //import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -48,7 +50,9 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent,
     TemplateCategoryComponent,
     routedclass,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    DanceComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +67,7 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig,'ForteHackTest'),
     AngularFireDatabaseModule,
+
     //AngularFontAwesomeModule
 
   ],

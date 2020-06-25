@@ -9,17 +9,24 @@
     </span>
   
     <span class="example-fill-remaining-space"></span>
-    <span style="padding-right: 30px;">
-      <button mat-raised-button><a routerLink="about">About Us</a></button>
-    </span>
-    <span>
-      
-    </span>
-    <span>
-        <button mat-button [matMenuTriggerFor]="menu"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></button>
+    <button mat-button><span class="material-icons">search</span></button>
+    
+      <span>
+        <button mat-button [matMenuTriggerFor]="menu"><span class="material-icons">menu</span></button>
         <mat-menu #menu="matMenu">
+        <button mat-menu-item>Webinars</button>
+        <button mat-menu-item>Community</button>
+        <button mat-menu-item>Competitions</button>
+        <button mat-menu-item>About Us</button>
+        </mat-menu>
+      </span>
+  
+      <span>
+        <button mat-button [matMenuTriggerFor]="menu2"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></button>
+        <mat-menu #menu2="matMenu">
         <button mat-menu-item>Sign Out</button>
         <button mat-menu-item>Profile</button>
         </mat-menu>
-    </span>
+      </span>
+
   </mat-toolbar>
