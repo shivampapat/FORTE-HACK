@@ -7,6 +7,7 @@ import { WebinarFrontComponent } from './webinar-front/webinar-front.component';
 import { WebinarVideosComponent } from './webinar-videos/webinar-videos.component';
 import { HomeComponent } from './home/home.component';
 import{CompetitionPageComponent} from './competition-page/competition-page.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'Profile', component: ProfileComponent},
   {path:'Webinar', component: WebinarFrontComponent},
   {path:'WebinarVideo', component: WebinarVideosComponent},
-  {path:'Competitions', component: CompetitionPageComponent}
+  {path:'Competitions', component: CompetitionPageComponent},
+  {path:'About', component: AboutComponent}
 ];
 
 @NgModule({
