@@ -8,6 +8,8 @@ import { WebinarVideosComponent } from './webinar-videos/webinar-videos.componen
 import { HomeComponent } from './home/home.component';
 import{CompetitionPageComponent} from './competition-page/competition-page.component';
 import { AboutComponent } from './about/about.component';
+import { NetworkingComponent } from './networking/networking.component'
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -18,7 +20,10 @@ const routes: Routes = [
   {path:'Webinar', component: WebinarFrontComponent},
   {path:'WebinarVideo', component: WebinarVideosComponent},
   {path:'Competitions', component: CompetitionPageComponent},
-  {path:'About', component: AboutComponent}
+  {path:'About', component: AboutComponent},
+  {path:'Networking',component: NetworkingComponent},
+  {path:'User-profile',component: UserProfileComponent},
+  
 ];
 
 @NgModule({
@@ -26,4 +31,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent];
+export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent];

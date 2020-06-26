@@ -31,6 +31,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { DanceComponent } from './dance/dance.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NetworkingComponent } from './networking/networking.component';
 
 
 //
@@ -52,7 +54,9 @@ import { DanceComponent } from './dance/dance.component';
     routedclass,
     FooterComponent,
     AboutComponent,
-    DanceComponent
+    DanceComponent,
+    UserProfileComponent,
+    NetworkingComponent
   ],
   imports: [
     BrowserModule,
