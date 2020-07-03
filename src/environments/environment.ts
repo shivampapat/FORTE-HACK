@@ -2,13 +2,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDnPNiuYRMxJftjvqtUjkFOJ_adzdRoqvw",
-    authDomain: "fir-angular-try1.firebaseapp.com",
-    databaseURL: "https://fir-angular-try1.firebaseio.com",
-    projectId: "fir-angular-try1",
-    storageBucket: "fir-angular-try1.appspot.com",
-    messagingSenderId: "519929165137",
-    appId: "1:519929165137:web:a244affe03f12b437e8f70",
-    measurementId: "G-39C09GEYMP"
+    apiKey: "AIzaSyCcbiy7kb6Ssz-ysab-xrCGIaZDUTMWzXM",
+    authDomain: "forte-hack-f6dce.firebaseapp.com",
+    databaseURL: "https://forte-hack-f6dce.firebaseio.com",
+    projectId: "forte-hack-f6dce",
+    storageBucket: "forte-hack-f6dce.appspot.com",
+    messagingSenderId: "928404212388",
+    appId: "1:928404212388:web:7da99f4451cae54c017431",
+    measurementId: "G-DT5MZEN4S2"
   }
 };

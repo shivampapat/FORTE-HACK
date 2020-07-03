@@ -1,160 +1,92 @@
-<!-- <div class="container-fluid">
-  <div style="color: blue;">
-    <h1>ForteHack</h1>
-    <h3>Signup</h3>
-   </div>
-  <div style="width: 300px;">
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="item">Full name</label>
-        <input type="text" class="form-control"
-          placeholder="Enter email id..." id="name"
-          required [(ngModel)]="name" name="name">
-          <br>
 
-        <label for="item">Email ID</label>
-        <input type="text" class="form-control"
-          placeholder="Enter email id..." id="item"
-          required [(ngModel)]="email_id" name="item">
-          <br>
-        <label for="item">Mobile Number</label>
-        <input type="text" class="form-control"
-          placeholder="Enter password" id="mobile_no"
-          required [(ngModel)]="mobile_no" name="mobile_no">
-          <label style="font-size: 23px;" for="gender"><b>Gender:</b></label>
-        <br><br>
-        <select name="gender" id="gender" [(ngModel)]="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Do not prefer to say</option>
-        
-        </select>
-      </div>
- 
-      <div class="btn-group">
-        <button type="submit" class="btn btn-success" [disabled]='!email_id'>Submit</button>
-      </div>
-    </form>
-  </div>
- 
-  <h2>Content from Firebase</h2>
-  <div class="col-md-3">
-    <pre *ngFor="let item of information | async">
-        {{item[0].email_id}}<br>
-        {{item[0].mobile_no}}<br>
-        {{item[0].name}}<br>
-        {{item[0].gender}}<br>
-    </pre>
-
- 
-    </div>
-
-
-
-</div>
-<router-outlet></router-outlet>
-<!-- <div class="container-fluid">
-  <div style="color: blue;">
-    <h1>ForteHack</h1>
-    <h3>Signup</h3>
-   </div>
-  <div style="width: 300px;">
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="item">Item</label>
-        <input type="text" class="form-control"
-          placeholder="Enter content..." id="item"
-          required [(ngModel)]="itemValue" name="item">
-      </div>
- 
-      <div class="btn-group">
-        <button type="submit" class="btn btn-success">Submit</button>
-      </div>
-    </form>
-  </div>
- 
-  <h2>Content from Firebase</h2>
-  <div class="col-md-3">
-    <pre *ngFor="let item of items | async">{{item.content}}</pre>
-
- 
-    </div>
-
-
-
-</div>
- --> 
-
- <div class="adjust" >
-    <form (ngSubmit)="onSubmit()">
-    <p>
-        <b style="font-size: 23px;">Full Name:</b>
-        <br><br>
-        <input style="font-size: large; width: 70%;" [(ngModel)]="name" type="text" name="name" placeholder="Enter Your Full Name" required>
-    </p>
-    <p>
-        <b style="font-size: 23px;">Email id</b>
-        <br><br>
-        <input style="font-size: large; width: 70%;" [(ngModel)]="email_id" type="text" name="Email_id" placeholder="Enter Your Email ID" required>
-    </p>
-    <p>
-        <b style="font-size: 23px;">Phone Number</b>
+<div class="parent" >
+<mat-card >
+  
+    <form [formGroup]="this.allService.form" >
+      <input placeholder="Enter your name" 
+             formControlName="name" 
+             type="text" 
+             style="width: 100%;"
+             >
+             <br><br>
+      <input placeholder="Enter your email id" 
+             formControlName="email" 
+             type="email" 
+            style="width: 100%;">
+             <br><br>
+      <input placeholder="Enter your mobile number" 
+             formControlName="mobile" 
+             type="number" 
+             style="width: 100%;"
+      >
+      <br><br>
+      <mat-form-field>
+          <mat-label>Gender</mat-label>
+          <mat-select name="gender" formControlName="gender" >
+            <mat-option *ngFor="let user of gender" [value]="user.value" >
+              {{user.type}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
         <br>
-        <input style="font-size: large; width: 40%;" [(ngModel)]="mobile_no" type="text" name="FirstName" placeholder="Enter Your Phone number">
-    </p>
-    <p>
-        <label style="font-size: 23px;" for="gender"><b>Gender:</b></label>
-        <br><br>
-
-        <select name="gender" id="gender" [(ngModel)]="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Do not prefer to say</option>
-        
-        </select>
-    </p>
-
-    <p>
-        <label style="font-size: 23px;" for="occupation"><b>Occupation:</b></label>
-        <br><br>
-
-        <select name="occupation" id="occupation" [(ngModel)]="occupation">
-        <option value="Student">Student</option>
-        <option value="Professional">Professional</option>
-        
-        </select>
-    </p>
-
-    <p>
-        <b style="font-size: 23px;">Institution Name</b>
-        <br><br>
-        <input style="font-size: large; width: 80%;" [(ngModel)]="institute_name" type="text" name="FirstName" placeholder="Enter Your Institution name">
-    </p>
-<p>
-        <label style="font-size: 23px;" for="looking_for"><b>I'm here looking for:</b></label>
-        <br><br>
-
-        <select name="looking_for" id="looking_for" [(ngModel)]="looking_for">
-        <option value="exploring">Exploring</option>
-        <option value="freelancing">Freelancing</option>
-        <option value="part-time">Part-time job</option>
-        
-        </select>
-    </p>
-
-    <button style="background-color: greenyellow; width: 100px; height: 35px; margin-left: 40%; margin-top: 30px; " type="submit">Upload Profile</button>
-</form>
-
-</div>
-        
-<div >
-    <pre *ngFor="let item of information | async">
-        {{item[0].email_id}}<br>
-        {{item[0].mobile_no}}<br>
-        {{item[0].name}}<br>
-        {{item[0].gender}}<br>
-        {{item[0].looking_for}}<br>
-        {{item[0].institute_name}}<br>
-        {{item[0].occupation}}<br>
-    </pre>
+        <mat-form-field>
+          <mat-label>Occupation</mat-label>
+          <mat-select name="occupation" formControlName="occupation" >
+            <mat-option *ngFor="let user of occupation" [value]="user.value" >
+              {{user.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <br>
+        <input placeholder="Enter your Institution name" 
+             formControlName="institution" 
+             type="text" 
+             style="width: 100%;"
+      >
+      <br>
+    
+        <mat-form-field>
+          <mat-label>I'm looking for</mat-label>
+          <mat-select name="looking" formControlName="looking" >
+            <mat-option *ngFor="let user of look" [value]="user.value" >
+              {{user.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <br>
+        <mat-label>Hobbies</mat-label>
+        <br>
+        <mat-checkbox  formControlName="hobbies">Stand Up</mat-checkbox>
+        <br>
+          <mat-checkbox formControlName="hobbies">Dance</mat-checkbox>
+          <br><mat-checkbox  formControlName="hobbies">Memes</mat-checkbox>
+          <br>
+          <mat-checkbox formControlName="hobbies">Sports</mat-checkbox>
+          <br>
+          <mat-checkbox  formControlName="hobbies">Writing</mat-checkbox>
+          <br>
+          <mat-checkbox formControlName="hobbies">Acting</mat-checkbox>
+          <br>
+          <mat-checkbox  formControlName="hobbies">Photography</mat-checkbox>
+          <br>
+          <mat-checkbox formControlName="hobbies">Fashion</mat-checkbox>
+          <br>
+          <mat-checkbox  formControlName="hobbies">Collections</mat-checkbox>
+          <br>
+          <mat-checkbox formControlName="hobbies">Hair and MakeUp</mat-checkbox>
+          <br>
+       
+          <br>
+       
+    <button 
+    class="waves-effect waves-light btn col s12" 
+    (click)="onSubmit()">
+    Submit
+    </button>
+    </form>
+  
+</mat-card>
 </div>
