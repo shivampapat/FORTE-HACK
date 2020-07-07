@@ -10,14 +10,10 @@ import{CompetitionPageComponent} from './competition-page/competition-page.compo
 import { AboutComponent } from './about/about.component';
 import { NetworkingComponent } from './networking/networking.component'
 import { UserProfileComponent } from './user-profile/user-profile.component';
-<<<<<<< HEAD
 import { CompetitionPageHostComponent } from './competition-page-host/competition-page-host.component';
- 
-=======
 import { DanceComponent } from './dance/dance.component';
 
 
->>>>>>> 5047ddcfee4fb73c3c602eff0391186e4fd73484
 const routes: Routes = [
   {path:'', component:HomeComponent},  
   {path:'SignIn', component: SignInComponent},
@@ -29,11 +25,8 @@ const routes: Routes = [
   {path:'About', component: AboutComponent},
   {path:'Networking',component: NetworkingComponent},
   {path:'User-profile',component: UserProfileComponent},
-<<<<<<< HEAD
   {path:'Competition-page-host',component: CompetitionPageHostComponent},
-=======
   {path:'Dance', component: DanceComponent}
->>>>>>> 5047ddcfee4fb73c3c602eff0391186e4fd73484
 ];
 
 @NgModule({
@@ -41,8 +34,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-<<<<<<< HEAD
 export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent,CompetitionPageHostComponent];
-=======
-export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent,DanceComponent];
->>>>>>> 5047ddcfee4fb73c3c602eff0391186e4fd73484
+//export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent,DanceComponent];
