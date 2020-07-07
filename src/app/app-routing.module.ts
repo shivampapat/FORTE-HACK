@@ -10,8 +10,8 @@ import{CompetitionPageComponent} from './competition-page/competition-page.compo
 import { AboutComponent } from './about/about.component';
 import { NetworkingComponent } from './networking/networking.component'
 import { UserProfileComponent } from './user-profile/user-profile.component';
-
-
+import { CompetitionPageHostComponent } from './competition-page-host/competition-page-host.component';
+ 
 const routes: Routes = [
   {path:'', component:HomeComponent},  
   {path:'SignIn', component: SignInComponent},
@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:'About', component: AboutComponent},
   {path:'Networking',component: NetworkingComponent},
   {path:'User-profile',component: UserProfileComponent},
-  
+  {path:'Competition-page-host',component: CompetitionPageHostComponent},
 ];
 
 @NgModule({
@@ -31,4 +31,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent];
+export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent,CompetitionPageHostComponent];
