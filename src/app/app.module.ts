@@ -34,6 +34,11 @@ import { DanceComponent } from './dance/dance.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NetworkingComponent } from './networking/networking.component';
 
+import{AllService} from './shared/all.service';
+import { from } from 'rxjs';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ReactiveFormsModule } from "@angular/forms";
 
 //
 //import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -67,15 +72,17 @@ import { NetworkingComponent } from './networking/networking.component';
     MatIconModule,
     MatGridListModule,
     MatCardModule,
+    MatCheckboxModule,
+    MatSelectModule,
     MatButtonModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig,'ForteHackTest'),
     AngularFireDatabaseModule,
-
+    ReactiveFormsModule
     //AngularFontAwesomeModule
 
   ],
-  providers: [],
+  providers: [AllService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

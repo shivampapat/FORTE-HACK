@@ -15,7 +15,7 @@
         <button mat-button [matMenuTriggerFor]="menu"><span class="material-icons">menu</span></button>
         <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink='Webinar'>Webinars</button>
-        <button mat-menu-item routerLink='Webinar'>Community</button>
+        <button mat-menu-item routerLink='Networking'>Community</button>
         <button mat-menu-item routerLink='Competitions'>Competitions</button>
         <button mat-menu-item routerLink='About'>About Us</button>
         </mat-menu>
@@ -25,7 +25,7 @@
         <button mat-button [matMenuTriggerFor]="menu2"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></button>
         <mat-menu #menu2="matMenu">
         <button mat-menu-item>Sign Out</button>
-        <button mat-menu-item>Profile</button>
+        <button mat-menu-item routerLink="User-profile">Profile</button>
         </mat-menu>
       </span>
 

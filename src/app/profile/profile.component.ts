@@ -1,7 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
-import {AngularFirestore} from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { AllService } from "../shared/all.service";
+import {FormControl} from '@angular/forms';
+interface Gender {
+  value: string;
+  type: string;
+}
+
+interface Occupation {
+  value: string;
+  viewValue: string;
+}
+
+interface looking {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-profile',
@@ -10,34 +23,38 @@ import { Observable } from 'rxjs';
 })
 export class ProfileComponent implements OnInit {
 
-  //variables to hold form values
-  email_id: String;
-  mobile_no: Number;
-  gender: String;
-  name: String;
-  looking_for: String;
-  occupation: String;
-  institute_name: String;
-
-  information : Observable<any[]>;
-
-  constructor(public data_from_firebase:AngularFireDatabase) {
-      this.information = data_from_firebase.list('/information').valueChanges();
-   }
+  constructor(public allService:AllService) {}
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
-      this.data_from_firebase.list('/information').push([{ name: this.name, 
-                                                                                    email_id: this.email_id, 
-                                                                                    mobile_no: this.mobile_no,
-                                                                                    gender: this.gender, 
-                                                                                    occupation:this.occupation, 
-                                                                                    looking_for: this.looking_for, 
-                                                                                    institute_name:this.institute_name
-                                                                                  }]);
-      console.log(this.email_id);                                                                            
+  look: looking[] = [
+    {value: 'Exploring', viewValue: 'Exploring'},
+    {value: 'Free-lancing', viewValue: 'Free lancing'},
+    {value: 'Part-time', viewValue: 'Part time job'}
+  ];
+  
+  occupation: Occupation[] = [
+    {value: 'Student', viewValue: 'Student'},
+    {value: 'Professional', viewValue: 'Professional'}
+  ];
+  
+  gender: Gender[] = [
+    {value: 'Male', type: 'Male'},
+    {value: 'Female', type: 'Female'}
+    
+  ];
+  
+  onSubmit()
+  {
+    let data = this.allService.form.value;
+    // console.log(data);
+    this.allService .profile_submit(data);
+      //  .then(res => {
+      //      console.log('yayy!!!!!!!!')
+      //  });
   }
+  
+  
 
 }
