@@ -1,5 +1,5 @@
 <!-- Toolbar -->
-
+<div *ngIf="route.children.length === 0">
     
     <div class="content" role="main">
     
@@ -12,7 +12,7 @@
       <!-- Resources -->
       <h1>Competitions</h1>
      
-      <button class="button button1"> Host</button>
+      <button class="button button1" routerLink="/Competition-page-host">Host</button>
       
 
       <br><br>
@@ -71,7 +71,7 @@
       </div>
     <br>
     <br>
-      <h2>Previous   Competitons:</h2>
+      <h2>Previous Competitions:</h2>
       <br>
       <div class="card-container">
         <div class="vertical">
@@ -102,4 +102,4 @@
      
     
     </div>
-    
+  </div>
