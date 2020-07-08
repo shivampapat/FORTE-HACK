@@ -7,7 +7,9 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {environment} from './../environments/environment';
 
-//Material 
+//Material
+import{MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatIconModule } from '@angular/material/icon'
@@ -39,6 +41,16 @@ import { from } from 'rxjs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ReactiveFormsModule } from "@angular/forms";
+
+const config = {apiKey: "AIzaSyDnPNiuYRMxJftjvqtUjkFOJ_adzdRoqvw",
+authDomain: "fir-angular-try1.firebaseapp.com",
+databaseURL: "https://fir-angular-try1.firebaseio.com",
+projectId: "fir-angular-try1",
+storageBucket: "fir-angular-try1.appspot.com",
+messagingSenderId: "519929165137",
+appId: "1:519929165137:web:a244affe03f12b437e8f70",
+measurementId: "G-39C09GEYMP"}
+
 
 //
 //import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -75,8 +87,10 @@ import { ReactiveFormsModule } from "@angular/forms";
     MatCheckboxModule,
     MatSelectModule,
     MatButtonModule,
+    MatFormFieldModule, 
+    MatInputModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig,'ForteHackTest'),
+    AngularFireModule.initializeApp(config),
     AngularFireDatabaseModule,
     ReactiveFormsModule
     //AngularFontAwesomeModule
