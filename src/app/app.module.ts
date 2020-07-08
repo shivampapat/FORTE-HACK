@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 //database
 import {AngularFireModule} from '@angular/fire';  
 import {AngularFireDatabaseModule} from '@angular/fire/database';
@@ -14,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card'
 import { MatButtonModule } from '@angular/material/button'
+
 
 //Components
 import { AppRoutingModule, routedclass } from './app-routing.module';
@@ -65,6 +67,7 @@ import { ReactiveFormsModule } from "@angular/forms";
   ],
   imports: [
     BrowserModule,
+   
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
