@@ -35,4 +35,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent,CompetitionPageHostComponent];
-//export const  routedclass = [SignInComponent,LogInComponent,ProfileComponent,WebinarFrontComponent,WebinarVideosComponent,HomeComponent,CompetitionPageComponent,NetworkingComponent,UserProfileComponent,DanceComponent];
