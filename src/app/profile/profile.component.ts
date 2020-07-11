@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AllService } from "../shared/all.service";
 import {FormControl} from '@angular/forms';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 interface Gender {
   value: string;
   type: string;
@@ -55,6 +56,10 @@ export class ProfileComponent implements OnInit {
       //  });
   }
   
+  showMessage()
+  {
+    alert('Submited Successfully!!!');
+  }
   
 
 }

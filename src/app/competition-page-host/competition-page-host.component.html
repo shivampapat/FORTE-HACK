@@ -1,47 +1,38 @@
-<h1 style="text-align:center">
-    Host your competition!
-  </h1>
-  <div class="host">
-    <h2 class="host-header">Competition-Details</h2>
+<div class="parent" >
+  <mat-card style="padding: 2%;">
     
+      <form [formGroup]="this.allService.form1" >
+        <h1 style="text-align:center">
+          Host your competition!
+        </h1>
+        <h2 class="host-header">Competition-Details</h2>
+        <mat-label>COMPETITION NAME :</mat-label>
+        <input type="text" placeholder="Name" formControlName="competition_name">
+        <br><br>
+
+        <mat-label>DATE :</mat-label>
+        <input type="date" placeholder="Date" formControlName="competition_date">
+        <br><br>
+
+        <mat-label>TIME :</mat-label>
+        <input type="time" placeholder="Time" formControlName="competition_time">
+        <br><br>
+
+        <mat-label>DESCRIPTION :</mat-label>
+        <textarea placeholder="Description" formControlName="competition_description"></textarea>
+        <br><br>
+
+        <mat-label>SKILLS :</mat-label>
+        <input type="text" placeholder="Skills" formControlName="skills">
+        <br><br>
+
+        <button 
+        class="waves-effect waves-light btn col s12" 
+        (click)="onSubmit()" style="margin-left: 35%;">
+        Submit
+        </button>
+        
+      </form>
+  </mat-card>
+</div>  
   
-    <label>COMPETITION NAME :</label>
-  
-     
-        <input type="competition-name" placeholder="Name" formControlName="competition-name">
-      
-      
-  <label>DATE :</label>
-  
-     
-        <input type="date" placeholder="Date" formControlName="competition-date">
-      
-  
-      <br>
-      
-      <label>TIME :</label>
-      
-        <input type="time" placeholder="Time" formControlName="competition-time">
-      
-  
-      
-      <br>
-      
-   <label>DESCRIPTION :</label>  <br><br>
-  
-      <textarea placeholder="Description" formControlName="competition-description"></textarea><br><br>
-      
-  <label>SKILLS :</label>
-      <br><br>
-      <input type="text" placeholder="Skills" formControlName="skills">
-  
-  
-  
-  
-      <p>
-      
-        <input type="submit" value="Host">
-      </p>
-     
-  
-  </div>

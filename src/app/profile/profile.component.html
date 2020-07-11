@@ -1,6 +1,6 @@
 
 <div class="parent" >
-<mat-card >
+<mat-card style="padding: 2%">
   
     <form [formGroup]="this.allService.form" >
       <input placeholder="Enter your name" 
@@ -61,29 +61,31 @@
         <br>
         <mat-checkbox  formControlName="hobbies">Stand Up</mat-checkbox>
         <br>
-          <mat-checkbox formControlName="hobbies">Dance</mat-checkbox>
-          <br><mat-checkbox  formControlName="hobbies">Memes</mat-checkbox>
+          <input type="checkbox" value='Dance' name="Dance" placeholder="Dance" formControlName="hobbies"><br>
+          <mat-checkbox >Dance</mat-checkbox>
           <br>
-          <mat-checkbox formControlName="hobbies">Sports</mat-checkbox>
+          <mat-checkbox value='Memes' formControlName="hobbies">Memes</mat-checkbox>
           <br>
-          <mat-checkbox  formControlName="hobbies">Writing</mat-checkbox>
+          <mat-checkbox value='Sports' formControlName="hobbies">Sports</mat-checkbox>
           <br>
-          <mat-checkbox formControlName="hobbies">Acting</mat-checkbox>
+          <mat-checkbox value='Writing' formControlName="hobbies">Writing</mat-checkbox>
           <br>
-          <mat-checkbox  formControlName="hobbies">Photography</mat-checkbox>
+          <mat-checkbox value='Acting' formControlName="hobbies">Acting</mat-checkbox>
           <br>
-          <mat-checkbox formControlName="hobbies">Fashion</mat-checkbox>
+          <mat-checkbox value='Photography' formControlName="hobbies">Photography</mat-checkbox>
           <br>
-          <mat-checkbox  formControlName="hobbies">Collections</mat-checkbox>
+          <mat-checkbox value='Fashion' formControlName="hobbies">Fashion</mat-checkbox>
           <br>
-          <mat-checkbox formControlName="hobbies">Hair and MakeUp</mat-checkbox>
+          <mat-checkbox aria-valuetext='Collections' formControlName="hobbies">Collections</mat-checkbox>
+          <br>
+          <mat-checkbox aria-valuetext="Hair and Makeup" formControlName="hobbies">Hair and MakeUp</mat-checkbox>
           <br>
        
           <br>
        
     <button 
     class="waves-effect waves-light btn col s12" 
-    (click)="onSubmit()">
+    (click)="onSubmit()" style="margin-left: 35%;" onclick="showMessage()">
     Submit
     </button>
     </form>

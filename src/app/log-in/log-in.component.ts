@@ -26,6 +26,7 @@ loginInfo :Observable<any[]>;
 
   public Copy(post)
   {
+    
     this.username = post.name;
     this.password = post.descriptor;
     this.display();

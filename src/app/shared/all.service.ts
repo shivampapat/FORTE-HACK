@@ -20,6 +20,14 @@ export class AllService {
     hobbies: new FormControl('')
 })
 
+form1 = new FormGroup({
+  competition_name: new FormControl(''),
+  competition_date: new FormControl(''),
+  competition_time: new FormControl(''),
+  competition_description: new FormControl(''),
+  skills: new FormControl(''),
+})
+
 
 profile_submit(data) {
   console.log(data);
@@ -31,4 +39,16 @@ profile_submit(data) {
           .then(res => {}, err => reject(err));
   });
 }
+
+host_commpetition(data) {
+  console.log(data);
+  return new Promise<any>((resolve, reject) =>{
+   
+      this.firestore
+          .collection("host_competition")
+          .add(data)
+          .then(res => {}, err => reject(err));
+  });
+}
+
 }
